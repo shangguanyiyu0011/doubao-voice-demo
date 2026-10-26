@@ -1,0 +1,38 @@
+# Private credentials and local settings
+.env
+.env.*
+!.env.example
+config.local.*
+*.pem
+*.key
+credentials*
+secrets*
+
+# Private generated audio, logs and sessions
+cache/
+logs/
+backups/
+exports/
+*.mp3
+*.wav
+*.m4a
+*.ogg
+*.aac
+*.flac
+*.log
+*.sqlite*
+*.db
+*.zip
+*.tar.gz
+*.bak
+
+# Development files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.pytest_cache/
+.DS_Store
+.idea/
+.vscode/
