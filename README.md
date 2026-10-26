@@ -4,6 +4,34 @@
 
 Local scripted voice demo with Doubao TTS, editable Q&A, audio caching, subtitles, and operator controls.
 
+## 界面预览
+
+以下为实际运行界面的截图，使用通用示例剧本与本地模拟音频；未连接真实 TTS 账号。豆包助手头像保留，个人用户头像和姓名使用通用示例。
+
+### 对话演示
+
+输入问题后，按预先编写的剧本顺序显示和播放回答，适用于产品介绍、活动演示和固定流程问答。
+
+![对话演示：按剧本顺序显示回答](docs/screenshots/01-conversation.png)
+
+### 问答剧本编辑
+
+在设置中编辑每轮问题和回答，调整顺序，导入剧本或关联已有音频。
+
+![问答剧本编辑：逐轮修改问题、回答及关联音频](docs/screenshots/02-script-editor.png)
+
+### 语音设置
+
+查看本地服务状态，选择音色、语速与播放音量，并在演示前生成缺失语音。真实凭据在本地 `.env` 配置。
+
+![语音设置：服务状态、音色、语速及预生成](docs/screenshots/03-voice-settings.png)
+
+### 现场控制
+
+按 F8 打开操作者控制台，可触发、重播、切换或跳转轮次；通话窗口显示豆包头像和当前状态。
+
+![现场控制：通话窗口与 F8 操作者控制台](docs/screenshots/04-live-controls.png)
+
 ## 能做什么
 
 - 在聊天与通话界面中编辑、演示最多 200 轮问答。
@@ -44,7 +72,7 @@ Local scripted voice demo with Doubao TTS, editable Q&A, audio caching, subtitle
 
 ## 数据与隐私
 
-- 仓库提供通用用户名、独立绘制的 SVG 图标和示例问答，不包含私人剧本、个人头像或真实凭据。
+- 保留豆包助手头像用于演示识别；用户头像使用通用 SVG 图标，并提供通用用户名和示例问答，不包含私人剧本、个人用户头像或真实凭据。
 - 凭据由本地 Python 服务读取；浏览器通过本地接口调用，不接收上游 API Key 或 AccessToken。
 - 服务仅监听 `127.0.0.1`，限制 Host、Origin、跨站访问及写接口会话令牌；静态文件白名单不提供 `.env`、源码或日志下载。
 - 剧本、显示设置和聊天记录保存在当前站点的浏览器存储中；音频使用 IndexedDB 和本地 `cache/tts/`。
